@@ -1,14 +1,14 @@
 {
-  "name": "React-Leoh-Ming",
+  "name": "react-leoh-ming",
   "version": "0.0.1",
   "description": "A React UI Library.",
-  "homepage": "https://github.com/worldzhao/react-ui-library-tutorial#readme",
+  "homepage": "https://github.com/LeonChan911/React-Leoh-Ming#readme",
   "typings": "lib/index.d.ts",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "authors": {
-    "name": "worldzhao",
-    "email": "1007326924@qq.com"
+    "name": "yin.chen chenyu.song",
+    "email": "149935573@qq.com"
   },
   "scripts": {
     "dev": "docz dev",
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/worldzhao/react-ui-library-tutorial.git"
+    "url": "git+https://github.com/LeonChan911/React-Leoh-Ming.git"
   },
   "keywords": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/worldzhao/react-ui-library-tutorial/issues"
+    "url": "https://github.com/LeonChan911/React-Leoh-Ming/issues"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
