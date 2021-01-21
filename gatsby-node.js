@@ -5,9 +5,9 @@ exports.onCreateWebpackConfig = args => {
     resolve: {
       modules: [path.resolve(__dirname, '../src'), 'node_modules'],
       alias: {
-        'happy-ui/lib': path.resolve(__dirname, '../components/'),
-        'happy-ui/esm': path.resolve(__dirname, '../components/'),
-        'happy-ui': path.resolve(__dirname, '../components/'),
+        'lm-ui/lib': path.resolve(__dirname, '../components/'),
+        'lm-ui/esm': path.resolve(__dirname, '../components/'),
+        'lm-ui': path.resolve(__dirname, '../components/'),
       },
     },
   });

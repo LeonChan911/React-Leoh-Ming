@@ -1,6 +1,6 @@
 # 可能是最详细的 React 组件库搭建总结
 
-在线预览：[戳我 😘](https://happy-ui.now.sh)
+在线预览：[戳我 😘](https://lm-ui.now.sh)
 
 本地预览：
 
@@ -77,12 +77,12 @@ yarn start
 
 ### 初始化项目
 
-新建一个`happy-ui`文件夹，并初始化。
+新建一个`lm-ui`文件夹，并初始化。
 
 ```bash
-mkdir happy-ui
+mkdir lm-ui
 
-cd happy-ui
+cd lm-ui
 
 npm init --y
 
@@ -384,7 +384,7 @@ yarn add rimraf --dev # 清空目录的一个辅助库
 export default {
   files: './components/**/*.{md,markdown,mdx}', // 识别的文件后缀
   dest: 'doc-site', // 打包出来的文件目录名
-  title: 'happy-ui', // 站点标题
+  title: 'lm-ui', // 站点标题
   typescript: true, // 组件源文件是通过typescript开发，需要打开此选项
 };
 ```
@@ -829,9 +829,9 @@ exports.onCreateWebpackConfig = args => {
     resolve: {
       modules: [path.resolve(__dirname, '../src'), 'node_modules'],
       alias: {
-        'happy-ui/lib': path.resolve(__dirname, '../components/'),
-        'happy-ui/esm': path.resolve(__dirname, '../components/'),
-        'happy-ui': path.resolve(__dirname, '../components/'),
+        'lm-ui/lib': path.resolve(__dirname, '../components/'),
+        'lm-ui/esm': path.resolve(__dirname, '../components/'),
+        'lm-ui': path.resolve(__dirname, '../components/'),
       },
     },
   });
@@ -847,9 +847,9 @@ exports.onCreateWebpackConfig = args => {
   "compilerOptions": {
     "baseUrl": "./",
 +   "paths": {
-+     "happy-ui": ["components/index.ts"],
-+     "happy-ui/esm/*": ["components/*"],
-+     "happy-ui/lib/*": ["components/*"]
++     "lm-ui": ["components/index.ts"],
++     "lm-ui/esm/*": ["components/*"],
++     "lm-ui/lib/*": ["components/*"]
 +    },
     "target": "esnext",
     "module": "commonjs",
@@ -897,10 +897,10 @@ exports.onCreateWebpackConfig = args => {
 
 ```diff
 - import Alert from '../alert';
-+ import Alert from 'happy-ui/lib/alert';
++ import Alert from 'lm-ui/lib/alert';
 
 - import '../style';
-+ import 'happy-ui/lib/alert/style';
++ import 'lm-ui/lib/alert/style';
 ```
 
 **components/alert/index.mdx**
@@ -956,7 +956,7 @@ exports.onCreateWebpackConfig = args => {
 
 > 值得注意的是：此处使用`cpr`(需要手动安装)将`lib`的声明文件拷贝了一份，并将文件夹重命名为`esm`，用于后面存放 ES module 形式的组件。这样做的原因是保证用户手动按需引入组件时依旧可以获取自动提示。
 
-> 最开始的方式是将声明文件单独存放在`types`文件夹，但这样只有通过'happy-ui'引入才可以获取提示，而'happy-ui/esm/xxx'和'happy-ui/lib/xxx'就无法获取提示。
+> 最开始的方式是将声明文件单独存放在`types`文件夹，但这样只有通过'lm-ui'引入才可以获取提示，而'lm-ui/esm/xxx'和'lm-ui/lib/xxx'就无法获取提示。
 
 **tsconfig.build.json**
 
@@ -1282,7 +1282,7 @@ const build = gulp.parallel(buildScripts);
 
 #### 拷贝 less 文件
 
-我们会将`less`文件包含在`npm`包中，用户可以通过`happy-ui/lib/alert/style/index.js`的形式按需引入`less`文件，此处可以直接将 less 文件拷贝至目标文件夹。
+我们会将`less`文件包含在`npm`包中，用户可以通过`lm-ui/lib/alert/style/index.js`的形式按需引入`less`文件，此处可以直接将 less 文件拷贝至目标文件夹。
 
 在`gulpfile.js`中新建`copyLess`任务。
 
@@ -1509,15 +1509,15 @@ function cssInjection(content) {
 使用以下方式引入，可以做到`js`部分的按需加载，但需要手动引入样式：
 
 ```js
-import { Alert } from 'happy-ui';
-import 'happy-ui/esm/alert/style';
+import { Alert } from 'lm-ui';
+import 'lm-ui/esm/alert/style';
 ```
 
 也可以使用以下方式引入：
 
 ```js
-import Alert from 'happy-ui/esm/alert'; // or import Alert from 'happy-ui/lib/alert';
-import 'happy-ui/esm/alert/style'; // or import Alert from 'happy-ui/lib/alert';
+import Alert from 'lm-ui/esm/alert'; // or import Alert from 'lm-ui/lib/alert';
+import 'lm-ui/esm/alert/style'; // or import Alert from 'lm-ui/lib/alert';
 ```
 
 以上引入样式文件的方式不太优雅，直接入口处引入**全量**样式文件又和按需加载的本意相去甚远。
@@ -1525,14 +1525,14 @@ import 'happy-ui/esm/alert/style'; // or import Alert from 'happy-ui/lib/alert';
 使用者可以借助[babel-plugin-import](https://www.npmjs.com/package/babel-plugin-import)来进行辅助，减少代码编写量（说好的不加入其他使用成本的呢~）。
 
 ```js
-import { Alert } from 'happy-ui';
+import { Alert } from 'lm-ui';
 ```
 
 ⬇️
 
 ```js
-import Alert from 'happy-ui/lib/alert';
-import 'happy-ui/lib/alert/style';
+import Alert from 'lm-ui/lib/alert';
+import 'lm-ui/lib/alert/style';
 ```
 
 ### 生成 umd

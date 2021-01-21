@@ -1,5 +1,5 @@
 {
-  "name": "happy-ui",
+  "name": "lm-ui",
   "builds": [
     {
       "src": "package.json",

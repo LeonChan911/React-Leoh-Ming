@@ -7,7 +7,7 @@
   "main": "lib/index.js",
   "module": "esm/index.js",
   "authors": {
-    "name": "yin.chen chenyu.song",
+    "name": "chenyin911",
     "email": "149935573@qq.com"
   },
   "scripts": {
