@@ -1,6 +1,6 @@
 export default {
   src: 'components',
   dest: 'doc-site', // 打包出来的文件目录名
-  title: 'react-leoh-ming', // 站点标题
+  title: 'newretail-components', // 站点标题
   typescript: true, // 组件源文件是通过typescript开发，需要打开此选项
 };
