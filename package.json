@@ -1,6 +1,6 @@
 {
   "name": "react-leoh-ming",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A React UI Library.",
   "homepage": "https://github.com/LeonChan911/react-leoh-ming#readme",
   "typings": "lib/index.d.ts",
