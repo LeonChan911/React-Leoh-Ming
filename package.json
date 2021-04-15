@@ -1,8 +1,8 @@
 {
-  "name": "newretail-components",
-  "version": "0.0.2",
+  "name": "react-leoh-ming",
+  "version": "0.0.3",
   "description": "A React UI Library.",
-  "homepage": "https://github.com/LeonChan911/newretail-components#readme",
+  "homepage": "https://github.com/LeonChan911/react-leoh-ming#readme",
   "typings": "lib/index.d.ts",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -31,12 +31,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeonChan911/newretail-components.git"
+    "url": "git+https://github.com/LeonChan911/react-leoh-ming.git"
   },
   "keywords": [],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/LeonChan911/newretail-components/issues"
+    "url": "https://github.com/LeonChan911/react-leoh-ming/issues"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
