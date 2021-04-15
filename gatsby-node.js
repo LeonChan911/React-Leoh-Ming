@@ -5,9 +5,9 @@ exports.onCreateWebpackConfig = args => {
     resolve: {
       modules: [path.resolve(__dirname, '../src'), 'node_modules'],
       alias: {
-        'lm-ui/lib': path.resolve(__dirname, '../components/'),
-        'lm-ui/esm': path.resolve(__dirname, '../components/'),
-        'lm-ui': path.resolve(__dirname, '../components/'),
+        'react-leoh-ming/lib': path.resolve(__dirname, '../components/'),
+        'react-leoh-ming/esm': path.resolve(__dirname, '../components/'),
+        'react-leoh-ming': path.resolve(__dirname, '../components/'),
       },
     },
   });

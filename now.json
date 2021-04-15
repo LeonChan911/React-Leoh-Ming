@@ -1,5 +1,5 @@
 {
-  "name": "lm-ui",
+  "name": "react-leoh-ming",
   "builds": [
     {
       "src": "package.json",

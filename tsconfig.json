@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "lm-ui": ["components/index.ts"],
-      "lm-ui/esm/*": ["components/*"],
-      "lm-ui/lib/*": ["components/*"]
+      "react-leoh-ming": ["components/index.ts"],
+      "react-leoh-ming/esm/*": ["components/*"],
+      "react-leoh-ming/lib/*": ["components/*"]
     },
     "target": "esnext",
     "module": "commonjs",
