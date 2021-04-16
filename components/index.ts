@@ -1,3 +1,2 @@
-
 /* PLOP_INJECT_EXPORT */
-export { default as Icon } from './icon';
+export { default as Modal } from './modal';
