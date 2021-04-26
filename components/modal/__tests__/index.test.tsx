@@ -5,7 +5,7 @@ import Modal from '../index';
 
 describe('Modal', () => {
   test('should render default', () => {
-    const { container } = render(<Modal />);
+    const { container } = render(<Modal visible />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -1,6 +1,6 @@
 {
   "name": "react-leoh-ming",
-  "version": "0.0.4",
+  "version": "0.1.5",
   "description": "A React UI Library.",
   "homepage": "https://github.com/LeonChan911/react-leoh-ming#readme",
   "typings": "lib/index.d.ts",
@@ -98,7 +98,7 @@
     "through2": "^3.0.1",
     "ts-jest": "^24.2.0",
     "ts-node": "^8.10.1",
-    "typescript": "^3.7.3"
+    "typescript": "3.7.3"
   },
   "lint-staged": {
     "components/**/*.ts?(x)": [
@@ -107,10 +107,7 @@
       "jest --bail --findRelatedTests",
       "git add"
     ],
-    "components/**/*.less": [
-      "stylelint --syntax less --fix",
-      "git add"
-    ]
+    "components/**/*.less": ["stylelint --syntax less --fix", "git add"]
   },
   "husky": {
     "hooks": {
@@ -125,6 +122,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "classnames": "^2.3.1",
     "prop-types": "^15.7.2"
   }
 }
