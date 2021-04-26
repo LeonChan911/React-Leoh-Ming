@@ -2,6 +2,12 @@
 
 exports[`Modal should render default 1`] = `
 <div>
-  Modal
+  <div
+    class="lm-modal-mask lm-modal-mask-animation lm-modal-mask-hidden"
+  >
+    <div
+      class="lm-modal-content lm-modal-content-animation lm-modal-content-hidden"
+    />
+  </div>
 </div>
 `;
