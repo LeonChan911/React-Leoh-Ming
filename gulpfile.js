@@ -12,6 +12,7 @@ const paths = {
     dist: 'dist',
   },
   styles: 'components/**/*.less',
+  imgs: 'components/**/*.{png,jpg,gif,bmp,jpeg,webp,svg}',
   scripts: [
     'components/**/*.{ts,tsx}',
     '!components/**/demo/*.{ts,tsx}',
@@ -88,7 +89,16 @@ function copyLess() {
     .pipe(gulp.dest(paths.dest.lib))
     .pipe(gulp.dest(paths.dest.esm));
 }
+/**
+ * @description: 生成imgs
+ */
 
+ function copyImg(){
+  return gulp
+  .src(paths.imgs)
+  .pipe(gulp.dest(paths.dest.lib))
+  .pipe(gulp.dest(paths.dest.esm));
+}
 /**
  * 生成css文件
  */
@@ -102,7 +112,7 @@ function less2css() {
     .pipe(gulp.dest(paths.dest.esm));
 }
 
-const build = gulp.parallel(buildScripts, copyLess, less2css);
+const build = gulp.parallel(buildScripts, copyLess, less2css, copyImg);
 
 exports.build = build;
 
